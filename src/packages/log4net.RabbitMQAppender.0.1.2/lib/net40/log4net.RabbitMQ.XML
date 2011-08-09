@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>log4net.RabbitMQ</name>
+    </assembly>
+    <members>
+        <member name="M:log4net.RabbitMQ.RabbitMQAppender.SetProtocol(System.String)">
+            <summary>
+            	Sets the protocol from a string.
+            	Uses <see cref="M:RabbitMQ.Client.Protocols.Lookup(System.String)"/> internally.
+            </summary>
+            <param name="protocol"></param>
+        </member>
+        <member name="P:log4net.RabbitMQ.RabbitMQAppender.Topic">
+            <summary>
+            	Gets or sets the routing key (aka. topic) with which
+            	to send messages. Defaults to {0}, which in the end is 'error' for log.Error("..."), and
+            	so on. An example could be setting this property to 'ApplicationType.MyApp.Web.{0}'
+            </summary>
+        </member>
+        <member name="P:log4net.RabbitMQ.RabbitMQAppender.HostName">
+            <summary>
+            	Gets or sets the host name of the broker to log to.
+            </summary>
+            <remarks>
+            	Default is 'localhost'
+            </remarks>
+        </member>
+        <member name="P:log4net.RabbitMQ.RabbitMQAppender.Exchange">
+            <summary>
+            	Gets or sets the exchange to bind the logger output to.
+            </summary>
+            <remarks>
+            	Default is 'log4net-logging'
+            </remarks>
+        </member>
+    </members>
+</doc>
